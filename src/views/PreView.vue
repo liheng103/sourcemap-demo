@@ -41,7 +41,7 @@ const encodeHTML = (str) => {
     .replace(/'/g, '&#39;')
 }
 </script>
-<style>
+<style scoped>
 .error-code {
   padding: 10px;
   overflow: hidden;
@@ -51,7 +51,7 @@ const encodeHTML = (str) => {
 .code-line {
   padding: 4px;
 }
-.heightlight {
+.highlight {
   color: #fff;
   background: #f12926;
 }
