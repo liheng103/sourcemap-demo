@@ -21,7 +21,7 @@
           </el-col>
           <el-row :gutter="20">
             <template v-if="item.origin">
-              <Preview :origin="item.origin" />
+              <PreView :origin="item.origin" />
             </template>
             <template v-else>
               <div>{{ item.fileName }}</div>
@@ -39,7 +39,8 @@
           </el-upload>
         </el-tab-pane>
         <el-tab-pane label="远程加载" name="request">
-          <el-button type="primary" @click="localMock()">本地模拟</el-button>
+          <span>远程加载</span>
+          <!-- <el-button type="primary" @click="localMock()">本地模拟</el-button> -->
         </el-tab-pane>
       </el-tabs>
     </el-dialog>
@@ -49,8 +50,7 @@
 import { onMounted, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import sourceMap from 'source-map-js'
-
-import Preview from '@/views/preView.vue'
+import PreView from '@/views/PreView.vue'
 const jsErrorList = ref<any>(null)
 const isError = ref(false)
 const activeNames = ref(['1'])
