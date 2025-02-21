@@ -41,7 +41,7 @@ const encodeHTML = (str) => {
     .replace(/'/g, '&#39;')
 }
 </script>
-<style scoped>
+<style>
 .error-code {
   padding: 10px;
   overflow: hidden;
